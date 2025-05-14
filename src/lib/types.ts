@@ -6,22 +6,23 @@ export interface WalletAdapter {
   connect(): Promise<void>;
   disconnect(): Promise<void>;
   getAccounts(): Promise<string[]>;
-  signTransaction(tx: Transaction): Promise<any>;
-  on(event: string, callback: Function): void;
-  off(event: string, callback: Function): void;
+  signTransaction(tx: Transaction): Promise<TransactionResult>;
+  on(event: string, callback: (event: string, ...args: unknown[]) => void): void;
+  off(event: string, callback: (event: string, ...args: unknown[]) => void): void;
 }
 
 // Transaction interfaces
 export interface Transaction {
   txBytes: string;
   txType: TransactionType | string;
-  details: any;
+  details: Record<string, unknown>;
 }
 
 export interface TransactionEvent {
   type: string;
-  data: Record<string, any>;
+  data: Record<string, unknown>;
 }
+
 
 export interface TransactionResult {
   digest: string;

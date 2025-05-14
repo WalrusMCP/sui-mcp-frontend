@@ -5,8 +5,8 @@ import React, { useState } from "react";
 import Header from "@/components/Header";
 import { TabType } from "@/lib/types";
 import TabNavigation from "@/components/TabNavigation";
-import ChatInterface from "@/components/ChatInterface";
-import TransactionHistory from "@/components/TransactionHistory";
+// import ChatInterface from "@/components/ChatInterface";
+// import TransactionHistory from "@/components/TransactionHistory";
 
 export default function Landing() {
   const [activeTab, setActiveTab] = useState<TabType>('c-user');
