@@ -181,7 +181,7 @@ const TransactionBuilder: React.FC = () => {
           <Label htmlFor="tx-type" className="block text-sm font-medium text-gray-700 mb-1">Transaction Type</Label>
           <Select
             value={txType}
-            onValueChange={(value) => {
+            onValueChange={(value: string) => {
               setTxType(value as TransactionType);
               setError(null);
             }}
