@@ -85,7 +85,7 @@ const TransactionForm: React.FC = () => {
           <Label htmlFor="tx-type" className="block text-sm font-medium text-gray-700 mb-1">Transaction Type</Label>
           <Select
             value={txType}
-            onValueChange={(value) => setTxType(value as TransactionType)}
+            onValueChange={(value:any) => setTxType(value as TransactionType)}
             disabled={!connected || buildingTx || executingTx}
           >
             <SelectTrigger className="w-full">

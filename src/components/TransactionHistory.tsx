@@ -86,7 +86,7 @@ const TransactionHistory: React.FC = () => {
                   <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Details</th>
                 </tr>
               </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
+              {/* <tbody className="bg-white divide-y divide-gray-200">
                 {isLoading ? (
                   <tr>
                     <td colSpan={4} className="px-6 py-4 text-center text-sm text-gray-500">
@@ -136,7 +136,7 @@ const TransactionHistory: React.FC = () => {
                     </tr>
                   ))
                 )}
-              </tbody>
+              </tbody> */}
             </table>
           </div>
         </div>
