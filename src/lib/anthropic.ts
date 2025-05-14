@@ -3,7 +3,7 @@ import Anthropic from '@anthropic-ai/sdk';
 // Initialize Anthropic client
 // the newest Anthropic model is "claude-3-7-sonnet-20250219" which was released February 24, 2025
 export const anthropic = new Anthropic({
-  apiKey: import.meta.env.VITE_ANTHROPIC_API_KEY || '', // This will be provided from the server
+  apiKey: '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', 
 });
 
 // Basic LLM request function
