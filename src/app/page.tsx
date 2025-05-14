@@ -21,23 +21,32 @@ export default function Landing() {
         </div>
 
         {activeTab === 'c-user' && (
-            <div>
-              <div className="mb-8">
-                <h1 className="text-2xl font-bold text-gray-900 mb-2">Chat with Sui Blockchain Assistant</h1>
-                <p className="text-gray-600">Interact with the blockchain through natural language. Ask questions, build transactions, and get crypto info by simply chatting.</p>
+          <div>
+            <div className="mb-8">
+              <h1 className="text-2xl font-bold text-gray-900 mb-2">Chat with Sui Blockchain Assistant</h1>
+              <p className="text-gray-600">Interact with the blockchain through natural language. Ask questions, build transactions, and get crypto info by simply chatting.</p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="lg:col-span-2">
+                {/* Chat interface replaces wallet connection and transaction builder */}
+                {/* <ChatInterface /> */}
               </div>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div className="lg:col-span-2">
-                  {/* Chat interface replaces wallet connection and transaction builder */}
-                  {/* <ChatInterface /> */}
-                </div>
-                <div className="lg:col-span-1">
-                </div>
+              <div className="lg:col-span-1">
               </div>
             </div>
-          )}
-          
+          </div>
+        )}
+
+        {activeTab === 'b-user' && (
+          <div>
+            <div className="mb-8">
+              <h1 className="text-2xl font-bold text-gray-900 mb-2">MCP Manifest SDK for Developers</h1>
+              <p className="text-gray-600">Integrate with Sui blockchain easily using our developer-friendly SDK and tools.</p>
+            </div>
+          </div>
+        )}
+
 
       </div>
 
