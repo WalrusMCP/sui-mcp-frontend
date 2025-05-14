@@ -16,10 +16,10 @@ export function useTransactions(client: MCPClient, userId?: number) {
   const [executingTx, setExecutingTx] = useState(false);
 
   // Query user's transactions
-  const { data: transactions = [], isLoading: isLoadingTransactions } = useQuery({
-    queryKey: [userId ? `/api/users/${userId}/transactions` : null],
-    enabled: !!userId,
-  });
+  // const { data: transactions = [], isLoading: isLoadingTransactions } = useQuery({
+  //   queryKey: [userId ? `/api/users/${userId}/transactions` : null],
+  //   enabled: !!userId,
+  // });
 
   // Build a transaction based on type
   const buildTransaction = useCallback(async (

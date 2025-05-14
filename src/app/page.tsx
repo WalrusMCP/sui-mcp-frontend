@@ -8,6 +8,11 @@ import TabNavigation from "@/components/TabNavigation";
 // import ChatInterface from "@/components/ChatInterface";
 // import TransactionHistory from "@/components/TransactionHistory";
 
+import SdkOverview from "@/components/SdkOverview";
+import QuickStartGuide from "@/components/QuickStartGuide";
+import ApiReference from "@/components/ApiReference";
+import ExampleProjects from "@/components/ExampleProjects";
+
 export default function Landing() {
   const [activeTab, setActiveTab] = useState<TabType>('c-user');
 
@@ -44,6 +49,10 @@ export default function Landing() {
               <h1 className="text-2xl font-bold text-gray-900 mb-2">MCP Manifest SDK for Developers</h1>
               <p className="text-gray-600">Integrate with Sui blockchain easily using our developer-friendly SDK and tools.</p>
             </div>
+              <SdkOverview />
+              <QuickStartGuide />
+              <ApiReference />
+              <ExampleProjects />
           </div>
         )}
 
