@@ -143,8 +143,6 @@ export function useTransactions(client: MCPClient, userId?: number) {
   }, [client, toast]);
 
   return {
-    transactions,
-    isLoadingTransactions,
     buildingTx,
     executingTx,
     buildTransaction,
