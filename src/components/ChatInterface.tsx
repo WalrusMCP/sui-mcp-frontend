@@ -247,16 +247,7 @@ const ChatInterface: React.FC = () => {
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg font-medium text-gray-900">Sui Blockchain Assistant</CardTitle>
           <div className="flex space-x-2">
-            {!connected && (
-              <Button 
-                variant="outline" 
-                size="sm" 
-                onClick={handleConnectWallet}
-                className="text-xs"
-              >
-                Connect Wallet
-              </Button>
-            )}
+           
             <Button 
               variant="ghost" 
               size="sm" 

@@ -1,10 +1,7 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { useWallet } from "@/hooks/use-wallet";
 import Image from "next/image";
 import {ConnectButton} from '@suiet/wallet-kit';
 const Header: React.FC = () => {
-  const { connected, connecting, address, connect, disconnect } = useWallet();
 
   return (
     <header className="bg-white shadow-sm">
