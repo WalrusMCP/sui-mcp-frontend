@@ -76,6 +76,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --wkit-button-width: 100px;
 }
 
 .dark {
@@ -110,6 +111,25 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+.wkit-button {
+  min-width: 0 !important;
+  width: 90px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  font-size: 13px !important;
+  border-radius: 9999px !important;
+  background: linear-gradient(90deg, #6fbcf0 0%, #4CC2FF 100%) !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px 0 rgba(76, 194, 255, 0.10) !important;
+  border: none !important;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.wkit-button:hover, .wkit-button:focus {
+  background: linear-gradient(90deg, #4CC2FF 0%, #6fbcf0 100%) !important;
+  box-shadow: 0 4px 16px 0 rgba(76, 194, 255, 0.18) !important;
+  transform: translateY(-2px) scale(1.04);
 }
 
 @layer base {
