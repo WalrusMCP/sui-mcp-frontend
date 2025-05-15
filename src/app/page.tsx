@@ -12,6 +12,7 @@ import SdkOverview from "@/components/SdkOverview";
 import QuickStartGuide from "@/components/QuickStartGuide";
 import ApiReference from "@/components/ApiReference";
 import ExampleProjects from "@/components/ExampleProjects";
+import AssetList from "@/components/AssetList";
 
 export default function Landing() {
   const [activeTab, setActiveTab] = useState<TabType>('c-user');
@@ -37,7 +38,9 @@ export default function Landing() {
                   {/* Chat interface replaces wallet connection and transaction builder */}
                   <ChatInterface />
                 </div>
+
                 <div className="lg:col-span-1">
+                  <AssetList />
                   <TransactionHistory />
                 </div>
                 <div className="lg:col-span-1">
