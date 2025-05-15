@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Header from "@/components/Header";
 import { TabType } from "@/lib/types";
 import TabNavigation from "@/components/TabNavigation";
-// import ChatInterface from "@/components/ChatInterface";
+import ChatInterface from "@/components/ChatInterface";
 // import TransactionHistory from "@/components/TransactionHistory";
 
 import SdkOverview from "@/components/SdkOverview";
@@ -35,7 +35,7 @@ export default function Landing() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-2">
                   {/* Chat interface replaces wallet connection and transaction builder */}
-                  {/* <ChatInterface /> */}
+                  <ChatInterface />
                 </div>
                 <div className="lg:col-span-1">
                 </div>
