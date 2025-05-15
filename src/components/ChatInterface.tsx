@@ -52,6 +52,9 @@ const ChatInterface: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+
+    console.log("23456789o8765r4e32345678=========")
+
     e.preventDefault();
     if (!input.trim()) return;
 
@@ -203,32 +206,6 @@ const ChatInterface: React.FC = () => {
     }
   };
 
-  // Handle wallet connection
-  const handleConnectWallet = async () => {
-    if (!connected) {
-      try {
-        await connect();
-        
-        const connectedMessage: Message = {
-          id: generateId(),
-          role: 'system',
-          content: 'Wallet connected successfully! You can now perform transactions.',
-          timestamp: new Date()
-        };
-        
-        setMessages(prevMessages => [...prevMessages, connectedMessage]);
-      } catch (error) {
-        const errorMessage: Message = {
-          id: generateId(),
-          role: 'system',
-          content: 'Failed to connect wallet. Please try again.',
-          timestamp: new Date()
-        };
-        
-        setMessages(prevMessages => [...prevMessages, errorMessage]);
-      }
-    }
-  };
 
   const clearChat = () => {
     setMessages([
@@ -247,7 +224,6 @@ const ChatInterface: React.FC = () => {
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg font-medium text-gray-900">Sui Blockchain Assistant</CardTitle>
           <div className="flex space-x-2">
-           
             <Button 
               variant="ghost" 
               size="sm" 
@@ -260,6 +236,7 @@ const ChatInterface: React.FC = () => {
           </div>
         </div>
       </CardHeader>
+
       <CardContent className="flex-1 overflow-hidden p-0 flex flex-col">
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           {messages.map((message) => (
