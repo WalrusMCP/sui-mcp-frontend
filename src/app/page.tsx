@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import { TabType } from "@/lib/types";
 import TabNavigation from "@/components/TabNavigation";
 import ChatInterface from "@/components/ChatInterface";
-// import TransactionHistory from "@/components/TransactionHistory";
+import TransactionHistory from "@/components/TransactionHistory";
 
 import SdkOverview from "@/components/SdkOverview";
 import QuickStartGuide from "@/components/QuickStartGuide";
@@ -36,6 +36,9 @@ export default function Landing() {
                 <div className="lg:col-span-2">
                   {/* Chat interface replaces wallet connection and transaction builder */}
                   <ChatInterface />
+                </div>
+                <div className="lg:col-span-1">
+                  <TransactionHistory />
                 </div>
                 <div className="lg:col-span-1">
                 </div>
