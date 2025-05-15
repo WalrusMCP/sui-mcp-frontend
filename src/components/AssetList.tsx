@@ -38,7 +38,6 @@ const AssetList: React.FC = () => {
               <thead className="bg-gray-50">
                 <tr>
                   <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Asset</th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Symbol</th>
                   <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
                   <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Value</th>
                 </tr>
@@ -54,7 +53,6 @@ const AssetList: React.FC = () => {
                   mockAssets.map((asset) => (
                     <tr key={asset.id}>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{asset.name}</td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{asset.symbol}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{asset.amount}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{asset.value}</td>
                     </tr>
