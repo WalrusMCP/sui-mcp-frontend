@@ -163,6 +163,12 @@ export class MCPClient {
     return this.walletAddress;
   }
 
+  async getBalance(address: string, coinType = '0x2::sui::SUI'): Promise<string | null> {
+    const res = await apiRequest('GET', `/api/sui/balance?address=${address}&coinType=${encodeURIComponent(coinType)}`);
+    const data = await res.json();
+    return data.balance ?? null;
+  }
+
   // Build transaction methods
   async buildTransferTransaction(params: TransferTransaction): Promise<Transaction> {
     const res = await apiRequest('POST', '/api/transactions/build/transfer', params);
